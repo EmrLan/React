@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Navbar, NavbarBrand } from 'reactstrap'
-import Menu from './components/MenuComponent';
+import Main from './components/MainComponent';
 import './App.css';
-import { DISHES } from './shared/dishes';
+import { BrowserRouter } from 'react-router-dom'
 
 function App(state) {
-  state = {
-    dishes: DISHES
-  };
-
   return (
-    <div className="App">
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+    <BrowserRouter>
+        <div>
+             <Main/>
         </div>
-      </Navbar>
-      <Menu dishes = {state.dishes} />
-    </div>
+    </BrowserRouter>
   );
 }
 
